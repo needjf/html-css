@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/mooviejs/css/moovie.min.css">
+
+</head>
+<body>
+   
+    <video id="example1" poster="https://raw.githubusercontent.com/SH20RAJ/Sopplayer/main/sample.png" controls>
+        <source src="https://bit.ly/bbsamplevideo" type="video/mp4">
+        <track kind="captions" label="Portuguese" srclang="pt" src="https://cdn.jsdelivr.net/gh/BMSVieira/moovie.js@main/demo-template/subtitles/en.vtt">
+        Your browser does not support the video tag.
+      </video>
+
+      <script src="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/mooviejs/js/moovie.min.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+           video1 = new Moovie({
+              selector: "#example1",
+              config: {
+                  controls : {
+                      playtime : true,
+                      mute : true,
+                      volume : true,
+                      subtitles : true,
+                      config : true,
+                      fullscreen : true,
+                      submenuCaptions : true,
+                      submenuOffset : true,
+                      submenuSpeed : true,
+                      allowLocalSubtitles : true
+                  }
+              }
+           });
+        });
+        </script>
+</body>
+</html>
